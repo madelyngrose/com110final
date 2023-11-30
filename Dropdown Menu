@@ -1,3 +1,5 @@
+#Adapted from the tutorial found on https://www.geeksforgeeks.org/dropdown-menus-tkinter/ 
+
 from tkinter import *
 
 class specific_heat:
