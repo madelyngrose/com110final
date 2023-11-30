@@ -1,5 +1,6 @@
 from tkinter import *
 class ideal_gas_law():
+#Adapted from the tutorial found on https://www.geeksforgeeks.org/dropdown-menus-tkinter/ 
     def __init__(self):
         self.root = Tk() 
         self.root.geometry("2000x2000")
