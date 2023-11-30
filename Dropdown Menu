@@ -1,0 +1,24 @@
+from tkinter import *
+
+class specific_heat:
+    root = Tk() 
+    root.geometry( "200x200" ) 
+    def show(): 
+        label.config( text = clicked.get()) 
+    options = [ 
+        "Heat (q)", 
+        "Mass (g)", 
+        "Specific Heat Capacity", 
+        "Temperature Change"]
+    clicked = StringVar()  
+    clicked.set("What value would you like to find?") 
+    drop = OptionMenu(root ,clicked ,*options ) 
+    drop.pack() 
+    button = Button( root , text = "click Me" , command = show ).pack() 
+    label = Label( root , text = " " ) 
+    label.pack() 
+    root.mainloop() 
+    if clicked == "Heat (q)":
+        input("What is the q value?")
+
+specific_heat()
