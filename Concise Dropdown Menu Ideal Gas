@@ -1,0 +1,60 @@
+from tkinter import *
+import  tkinter as tk
+
+class ideal_gas_law():
+#Adapted from the tutorial found on https://www.geeksforgeeks.org/dropdown-menus-tkinter/ 
+    def __init__(self):
+        self.root = Tk() #If you want to keep using a class, initialize the function with only this
+        self.root.geometry("2000x2000") #Sets the size of the window
+        self.options = [ #Provides the options for the initial dropdown menu
+        "Pressure", 
+        "Volume", 
+        "Moles", 
+        "Temperature"]
+        self.selection = StringVar() #Selection becomes string
+        self.selection.set("What value would you like to find?") #Initial value for the dropdown menu
+        self.drop = OptionMenu(self.root, self.selection, *self.options) #Displaying dropdown menu options
+        self.drop.pack()
+        self.button1 = Button(self.root, text="Select", command=self.show) #Displays the button that confirms dropdown option
+        self.button1.pack()
+        self.label = Label(self.root, text=" ") 
+        self.label.pack()
+        self.root.mainloop()
+        self.canvas1 = tk.Canvas(self.root, width=400, height=300)
+        self.canvas1.pack()
+        self.entry1 = tk.Entry(self.root) 
+        self.canvas1.create_window(200, 140, window=self.entry1)
+
+    def user_input(self, root, variable):
+        label = tk.Label(root, text=variable)
+        label.pack()
+        textbox = tk.Entry(root)
+        textbox.pack()
+
+    def show(self): 
+        selected = self.selection.get()
+        self.label.config(text=selected)
+        root = tk.Tk()
+        if selected == "Pressure":
+            self.user_input(root, "Volume in Liters")
+            self.user_input(root, "Number of Moles")
+            self.user_input(root, "Temperature in Kelvin")
+
+        elif selected == "Volume":
+            self.user_input(root, "Pressure in Bars")
+            self.user_input(root, "Number of Moles")
+            self.user_input(root, "Temperature in Kelvin")
+
+        elif selected == "Moles":
+            self.user_input(root, "Pressure in Bars")
+            self.user_input(root, "Volume in Liters")
+            self.user_input(root, "Temperature in Kelvin")
+
+
+        elif selected == "Temperature":
+            self.user_input(root, "Pressure in Bars")
+            self.user_input(root, "Number of Moles")
+            self.user_input(root, "Volume in Liters")
+
+
+ideal_gas_law()
