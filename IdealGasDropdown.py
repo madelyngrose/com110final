@@ -28,13 +28,13 @@ class IdealGasLaw:
 
         if selected not in self.user_input_values:
             if selected == "Pressure":
-                variables = ["Volume", "Moles", "Temperature"]
+                variables = ["Volume in Liters", "Number of Moles", "Temperature in Kelvin"]
             elif selected == "Volume":
-                variables = ["Pressure", "Moles", "Temperature"]
+                variables = ["Pressure in Bars", "Number of Moles", "Temperaturein Kelvin"]
             elif selected == "Moles":
-                variables = ["Pressure", "Volume", "Temperature"]
+                variables = ["Pressure in Bars", "Volume in Liters", "Temperature in Kelvin"]
             elif selected == "Temperature":
-                variables = ["Pressure", "Moles", "Volume"]
+                variables = ["Pressure in Bars", "Number of Moles", "Volume in Liters"]
 
             self.user_input_values[selected] = [self.user_input(f"Enter {param}") for param in variables]
 
