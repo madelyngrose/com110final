@@ -63,3 +63,9 @@ class IdealGasLaw:
         self.label.config(text=output)
 
 IdealGasLaw()
+
+"""
+References:
+https://docs.python.org/3/library/tkinter.html
+How to create dropdown menu using tkinter: https://www.geeksforgeeks.org/dropdown-menus-tkinter/
+"""
