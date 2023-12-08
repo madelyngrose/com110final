@@ -3,7 +3,7 @@ from tkinter import *
 class IdealGasLaw:
     def __init__(self):
         self.root = Tk()
-        self.root.geometry("400x300")
+        self.root.geometry("2000x2000")
         self.root.title("Ideal Gas Law Calculator")
         self.options = ["Pressure", "Volume", "Moles", "Temperature"]
         self.selection = StringVar()
