@@ -62,7 +62,7 @@ class IdealGasLaw:
             temp = (pressure * volume) / (0.0831446 * moles)
             output = ("The temperature is",temp,"Kelvin")
 
-        self.label.config(text=output) Prints the output of the variable of interest
+        self.label.config(text=output) #Prints the output of the variable of interest
 
 IdealGasLaw()
 
